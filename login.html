@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <section class="auth-section">
+        <div class="tab">
+            <button class="tab-button" onclick="openForm('login')">Login</button>
+            <button class="tab-button" onclick="openForm('create-account')">Create Account</button>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login" class="form-content">
+            <h2>Login</h2>
+            <form action="submit-login.php" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Create Account Form -->
+        <div id="create-account" class="form-content" style="display:none;">
+            <h2>Create Account</h2>
+            <form action="submit-create-account.php" method="POST">
+                <label for="new-name">Name:</label>
+                <input type="text" id="new-name" name="name" required>
+                <label for="new-email">Email:</label>
+                <input type="email" id="new-email" name="email" required>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="password" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        function openForm(formName) {
+            var i;
+            var x = document.getElementsByClassName("form-content");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; // Hide all forms
+            }
+            document.getElementById(formName).style.display = "block"; // Show the selected form
+        }
+        // Handle login submission
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent actual form submission
+            // Simulate successful login (here, you could add login validation)
+            alert("Login successful!");
+            window.location.href = "Farmer.html"; // Redirect to farmers page
+        }
+
+        // Handle create account submission
+        function handleCreateAccount(event) {
+            event.preventDefault(); // Prevent actual form submission
+            // Simulate successful account creation
+            alert("Account created successfully!");
+            window.location.href = "Farmer.html"; // Redirect to farmers page
+        }
+    </script>
+
+</body>
+<style>
+    /* Tabbed buttons for switching between login and create account */
+.tab {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 0 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab-button:hover {
+    background-color: #218838;
+}
+
+/* Style the form content */
+.form-content {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-content h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-content label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+    font-size: 1rem;
+}
+
+.form-content input[type="email"],
+.form-content input[type="text"],
+.form-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-content button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-content button:hover {
+    background-color: #218838;
+}
+
+/* Hides one form when the other is active */
+.form-content {
+    display: none;
+}
+body{
+    color: white;
+    padding: 60px;
+    text-align: center;
+    background: url(agri8.jpg);
+    background-position: center;
+    background-size: cover;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: larger;
+    text-shadow: black;
+}
+
+</style>
+</html>

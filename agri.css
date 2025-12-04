@@ -1,0 +1,210 @@
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0%;
+    font-family: Arial, sans-serif;
+    height: 2000px;
+}
+
+/* Header styling */
+header {
+    color: white;
+    padding: 60px;
+    text-align: center;
+    background: url(4293142.webp);
+    background-position: center;
+    background-size: cover;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: larger;
+    text-shadow: black;
+    
+    
+}
+.main a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.5s;
+    margin-bottom: 50px;
+}
+
+.main a:hover {
+    color: rgb(14, 216, 81); 
+    text-decoration: underline;
+    
+}
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.intro p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+/* Slider container */
+.slider {
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+/* Fading slides */
+.slide {
+    display: none;
+}
+
+/* Reduced height for the images */
+.slide img {
+    width: 100%;
+    height: 700px; /* Reduce height here */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    border-radius: 30px;
+}
+
+
+/* Dots for navigation */
+.dots {
+    text-align: center;
+    position: relative;
+    top: -30px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.active, .dot:hover {
+    background-color: #050504;
+}
+
+/* Fading animation */
+.fade {
+    animation: fadeEffect 4s ease infinite;
+}
+
+@keyframes fadeEffect {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Features Section */
+.features {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #e7f3e7;
+    border-left: 4px solid #4CAF50;
+    margin-bottom: 15px;
+}
+/* Call-to-Action (CTA) Section */
+.cta {
+    padding: 40px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+.cta h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: #4CAF50;
+    border: 2px solid white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-btn:hover {
+    background-color: #e7f3e7;
+    color: #4CAF50;
+}
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+footer nav {
+    margin-bottom: 10px;
+}
+
+footer nav a {
+    color: #bbb;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    color: white;
+}
+
+footer .social-media a {
+    color: #bbb;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    color: white;
+}
+.copy{
+    background-color: #bbb;
+}
+footer .social-media i{
+    color: white;
+    margin: 0 20px;
+    font-size: larger;
+}
